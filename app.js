@@ -2,8 +2,6 @@ const csv = require('csvtojson');
 const vd = require('./validation/validators');
 const vdm = require('./validation/validationMaps');
 
-
-
 const http = require('http');
 
 const hostname = '127.0.0.1';
@@ -21,7 +19,7 @@ const server = http.createServer((req, res) => {
         await vd.validateEquipment(jsonArray, vdm.equipmentMap, errors);
 
         res.end(JSON.stringify(errors))
-        //console.log(jsonArray);
+        console.log("Endpoint reached.");
     } 
   )
 

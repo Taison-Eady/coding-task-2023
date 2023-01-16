@@ -1,5 +1,4 @@
 let lineError = require('../models/LineError');
-let _ = require('lodash')
 
 // ------------------ Main Validators -------------------- //
 
@@ -13,16 +12,12 @@ async function validateEquipment(equipmentList, fieldMap, errors) {
 
 
 //Checks equipment list for required fields and registers an error if a required field is missing.
-//#####TASK######:
-//1. Extend functionality to register a new error if an unknown field is present in the equipment list.
-//2. If possible, refactor to simplify and make the code easier to understand
 
 function validateColumns(equipmentList, fieldMap, errors) {
 
     let headers = Object.keys(equipmentList[0])
 
     for (col = 0; col < headers.length; col++) {
-        console.log(headers[col]);
         let field = fieldMap.get(headers[col]);
         if (field) {
             field.colIndex = col;
@@ -52,7 +47,6 @@ function validateData(equipmentList, fieldMap, errors) {
             let vStr = item[1].validationString;
             let attr = equipment[column];
 
-            //#### What is happening here? ####
             if (!vStr) {
                 continue;
             }
