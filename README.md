@@ -13,9 +13,11 @@ Complete the following tasks:
 
 3. Update the validation strings on the "Subsystem" and "PLU" fields so that an error is registerd when an '&' symbol is present.
 
+4. Add some HTML and CSS to the response object so that the errors list is more human readable.
+
 ** Feel free to refactor existing code to simplify, make it more readable or to fit in with your solution **
 
 Bonus Task:
-Add some HTML and CSS to the response object so that the errors list is more human readable.
+Rewrite this program using a front end tech such as Angular, React, or what ever your favourite framework is. This can be a minimal single page where the user clicks a "Validate" button, and the validataoin errors are displayed to the browser window.
 
 To submit your solution, either send me a link to a new gitub repo, or you can simply zip up the source code and email to taison.eady@rjeglobal.com
